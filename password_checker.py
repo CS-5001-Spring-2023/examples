@@ -6,5 +6,37 @@ Modify your solution so that the user can only try to enter the correct password
 ACTUAL_PASSWORD = "5001ROCKs"
 
 def main():
+	user_password = input("password: ")
+	num_tries = 1
+
+	while ACTUAL_PASSWORD != user_password:	
+		print("Invalid password.")
+		user_password = input("password: ")
+		# response = input("password: ") 
+
+	print("Successful login")
+
 
 main()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
