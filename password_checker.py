@@ -4,18 +4,23 @@ Write a program that will prompt a user for a password and verify that it matche
 Modify your solution so that the user can only try to enter the correct password a maximum of three times.
 """
 ACTUAL_PASSWORD = "5001ROCKs"
+MAX_TRIES = 3
 
-def main():
-	user_password = input("password: ")
+
+def login():
+	
 	num_tries = 1
 
-	while ACTUAL_PASSWORD != user_password:	
+	user_password = input("password: ")
+	
+	while ACTUAL_PASSWORD != user_password and num_tries < MAX_TRIES:	
+		
 		print("Invalid password.")
+		num_tries += 1		
 		user_password = input("password: ")
-		# response = input("password: ") 
 
-	print("Successful login")
-
+def main():
+	login()
 
 main()
 
