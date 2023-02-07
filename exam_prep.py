@@ -38,18 +38,30 @@ def count_between(word, delimiter):
 	"""
 	pass
 
+def find_word_in_file(word, filename):	
+	"""
+	Searches for a given word in a file. 
+	Parameters:
+	word: str
+		the search term
+	filename: str
+		the name of the file to search
+	Returns:
+	list
+		line numbers where word appears in filename
+	"""
+
 
 def main():
 	# test average_grade
-	grades = [
-				[90, 95, 85],
-				[80, 80, 80, 80],
-				[90, 95, 100]
-			]
-	print(average_grade(grades))
+	# grades = [
+	# 			[90, 95, 85],
+	# 			[80, 80, 80, 80],
+	# 			[90, 95, 100]
+	# 		]
+	# print(average_grade(grades))
 
-	# print(average_grade(grades)) # should print 90, 80, 95
-
+	# print(find_word_in_file("fish", "text_file.txt"))
 
 
 	# print(count_between("aa-c-a", "-")) # should return 1
