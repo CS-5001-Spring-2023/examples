@@ -15,6 +15,7 @@ def search_replace(search, replace, infilename, outfilename):
 	outfilename : str
 		the name of the file where the result will be saved
 	"""
+	pass
 
 def main():
 	# The search term, replace term, input file name, and output file name
