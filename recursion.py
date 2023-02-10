@@ -65,3 +65,11 @@ def in_english(number):
 	in_english(153) would return "one five three".
 	"""
 	pass
+
+def binarysearch(list, target):
+ 	"""
+ 	Write a recursive function that returns True if the target
+ 	exisits in the list and False otherwise.
+ 	"""
+ 	pas
+s
