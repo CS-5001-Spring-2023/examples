@@ -21,7 +21,7 @@ def main():
 	# The search term, replace term, input file name, and output file name
 	# will be passed as command line parameters.
 	if len(sys.argv) != 5:
-		print("usage: python3 file_io.py <search> <replace> <infilename> <outfilename")
+		print("usage: python3 file_io.py <search> <replace> <infilename> <outfilename>")
 		exit()
 	search_replace(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
 
