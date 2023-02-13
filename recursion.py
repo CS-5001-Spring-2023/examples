@@ -3,7 +3,12 @@ def factorial_iterative(n):
 	Implement a function `def factorial(n):` in Python. The function takes as input an
 	integer and returns the factorial of that number.
 	"""
-	pass
+	factorial = 1
+	current_value = 1
+	while current_value <= n:
+		factorial = factorial * current_value
+		current_value += 1
+	return factorial
 
 def factorial_recursive(n):
 	"""
@@ -11,7 +16,14 @@ def factorial_recursive(n):
 	integer and returns the factorial of that number.
 	Do not use a loop in the implementation of this function.
 	"""	
-	pass
+	if n == 1:
+		return 1
+	result = factorial_recursive(n-1)
+	my_value = n * result
+	return my_value
+
+print(factorial_recursive(5))	
+
 
 def print_string(string):
 	"""
@@ -71,5 +83,4 @@ def binarysearch(list, target):
  	Write a recursive function that returns True if the target
  	exisits in the list and False otherwise.
  	"""
- 	pas
-s
+ 	pass
