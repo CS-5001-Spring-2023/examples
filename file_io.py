@@ -5,6 +5,7 @@ def search_replace(search, replace, infilename, outfilename):
 	Write a function that will replace all instances of a search
 	term in a given file with a replace term. The result will be 
 	saved to a new file.
+	
 	Parameters:
 	search : str
 		the string to replace
@@ -24,6 +25,7 @@ def search_replace(search, replace, infilename, outfilename):
 	inputfile.close()
 	outputfile.close()
 
+search_replace("a", "b", "c", "d")
 
 def main():
 	# The search term, replace term, input file name, and output file name
