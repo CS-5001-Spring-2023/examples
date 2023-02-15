@@ -18,11 +18,13 @@ def factorial_recursive(n):
 	"""	
 	if n == 1:
 		return 1
+	# return n * factorial_recursive(n-1)
+
 	result = factorial_recursive(n-1)
 	my_value = n * result
 	return my_value
 
-print(factorial_recursive(5))	
+# print(factorial_recursive(5))	
 
 
 def print_string(string):
@@ -30,31 +32,70 @@ def print_string(string):
 	Implement a recursive function that takes as input a str and prints 
 	the characters of the str one per line *without using a loop*. 
 	"""
-	pass
+	# base case
+	print(f"my string is {string}")
+	if len(string) == 0:
+		print("returning...")
+		return
+
+	# do the job
+	print(string[0])
+
+	# recurse -- making the string smaller
+	print_string(string[1:])
+
+# print_string("bird")
 
 def print_string_backward(string):
 	"""
 	Implement a recursive function that takes as input a str and prints 
 	the characters of the str *in reverse* one per line *without using a loop*. 
 	"""
-	pass	
+	if len(string) == 0:
+		return
+
+	# print(string[0])
+	print_string_backward(string[1:])
+	print(string[0])
+
+# print_string_backward("bird")
 
 def print_nums_iterative(n):
 	"""
 	A function that takes as input a number and prints from 1 to 
 	the number (inclusive).
 	"""
-	pass
+	number = 1
+	while number <= n:
+		print(number)
+		number += 1
+
 
 def print_nums_recursive(n):
 	"""
 	Implement print_nums_iterative above without using a loop.
 	"""
-	pass
+	# print_nums_recursive_helper(1, n)
+	if n == 1:
+		print(n)
+		return
+
+	print_nums_recursive(n-1)
+	print(n)
 
 
+print_nums_recursive(5)
+
+# 1, 5
 def print_nums_recursive_helper(current, n):
-	pass
+	if current == n:
+		print(n) # or print(current)
+		return
+	
+	print(current)
+	print_nums_recursive_helper(current+1, n)
+
+
 
 def find_char_a(string):
 	"""
@@ -66,8 +107,10 @@ def find_char_a(string):
 	"""
 	pass
 
+
 def find_char_a_helper(string, current_position):
 	pass
+
 
 def in_english(number):
 	"""

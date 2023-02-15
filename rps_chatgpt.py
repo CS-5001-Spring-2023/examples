@@ -13,8 +13,8 @@ def play_game():
     # nice design with the list and choosing a random val from that list
     options = [ROCK, 'paper', 'scissors']
     computer_choice = random.choice(options)
-    # consider using .lower() at the end of this line to avoid it in the if below
-    user_choice = input("Enter your choice (rock/paper/scissors): ")
+    # consider using .lower() at the end of this line to avoid it in the if belo
+w    user_choice = input("Enter your choice (rock/paper/scissors): ")
 
     while user_choice.lower() not in options:
         print("Invalid choice, please try again.")
