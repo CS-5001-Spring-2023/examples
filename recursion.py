@@ -107,7 +107,6 @@ def find_char_a(string):
 	"""
 	pass
 
-
 def find_char_a_helper(string, current_position):
 	pass
 

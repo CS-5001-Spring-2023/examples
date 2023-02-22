@@ -25,7 +25,7 @@ def search_replace(search, replace, infilename, outfilename):
 	inputfile.close()
 	outputfile.close()
 
-search_replace("a", "b", "c", "d")
+# search_replace("a", "b", "c", "d")
 
 def main():
 	# The search term, replace term, input file name, and output file name
