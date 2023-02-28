@@ -1,5 +1,16 @@
-inventory_item_list = ['Chocolate Brownie', 'Carrot Cake', 'Blueberry Scone']
-inventory_quantity_list = [12, 5, 9]
+inventory_item_list = []
+inventory_quantity_list = []
+
+def add_new_item(new_item, number_available):
+	"""
+	Add a new item to the inventory with quantity number_available.
+	Raises an exception if the item is already in the 
+	inventory.
+	"""
+	if new_item in inventory_item_list:
+		raise Exception('We already sell that.')
+	inventory_item_list.append(new_item)
+	inventory_quantity_list.append(number_available)
 
 def get_number_available(item_to_find):
 	"""
@@ -31,5 +42,12 @@ def show_inventory():
 	Display the item names and amounts for all items in the
 	inventory.
 	"""
+	print('Inventory:')
 	for i in range(len(inventory_item_list)):
-		print(f'There are {inventory_quantity_list[i]} {inventory_item_list[i]} available.')
+		print(f'\t{inventory_item_list[i]} - {inventory_quantity_list[i]}')
+
+def main():
+	print("***********HELLO CLASS**********")	
+
+if __name__ == '__main__':
+	main()

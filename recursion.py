@@ -125,4 +125,24 @@ def binarysearch(list, target):
  	Write a recursive function that returns True if the target
  	exisits in the list and False otherwise.
  	"""
- 	pass
+ 	if len(list) < 2:
+ 		# we're a little bit cheating here
+ 		return target in list 
+ 	mid = len(list) // 2
+ 	if list[mid] == target:
+ 		return True
+ 	if target < list[mid]:
+ 		return binarysearch(list[:mid], target)
+ 	return binarysearch(list[mid+1:], target)
+
+print(binarysearch([1, 3, 45, 67, 89], 45))
+print(binarysearch([1, 3, 45, 67, 89], 1))
+print(binarysearch([1, 3, 45, 67, 89], 3))
+print(binarysearch([1, 3, 45, 67, 89], 67))
+print(binarysearch([1, 3, 45, 67, 89], 89))
+print(binarysearch([1, 3, 45, 67, 89], -2))
+print(binarysearch([1, 3, 45, 67, 89], 18))
+print(binarysearch([1, 3, 45, 67, 89], 92))
+print(binarysearch([1, 3, 45, 67, 89, 92], 92))
+print(binarysearch([1, 3, 45, 67, 89, 92], 93))
+print(binarysearch([1, 3, 45, 67, 89, 92], 0))
