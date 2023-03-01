@@ -1,9 +1,8 @@
 # import inventory_lists as inventory
 # import inventory_dictionary as inventory
-import inventory_expanded as inventory
-# from Inventory import Inventory
-# from Inventory import Inventory 
-# from Inventory_Item import Inventory_Item
+# import inventory_expanded as inventory
+# from inventory import Inventory
+# from inventory_item import Inventory_Item
 
 def main():
 

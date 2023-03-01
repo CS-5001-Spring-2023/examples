@@ -1,6 +1,8 @@
 class Inventory_Item:
 
-	def __init__(self, name, quantity, inventory_number):
+	# inventory_number_generator = 1
+
+	def __init__(self, name, quantity):
 		pass
 
 	def __str__(self):
