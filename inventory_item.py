@@ -3,13 +3,15 @@ class Inventory_Item:
 	# inventory_number_generator = 1
 
 	def __init__(self, name, quantity):
-		pass
+		self.name = name
+		self.quantity = quantity
+		self.inventory_number = 'a123f'
 
 	def __str__(self):
-		pass
+		return f'\t{self.name} - {self.quantity}'
 
 	def purchase(self, num_to_purchase):
-		pass
+		self.quantity -= num_to_purchase
 
 	def get_number_available(self):
-		pass
+		return self.quantity

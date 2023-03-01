@@ -2,7 +2,12 @@ import constants
 
 inventory_number = 0
 
-inventory = {}
+inventory = {
+	'Brownie': {
+		'quantity': 12,
+		'inventory_number': 'a123f'
+	}
+}
 
 def next_inventory_number():
 	global inventory_number #Hey! We haven't learned about this.
