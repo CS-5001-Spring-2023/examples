@@ -1,34 +1,12 @@
-# import inventory_lists as inventory
-# import inventory_dictionary as inventory
-# import inventory_expanded as inventory
-# from inventory import Inventory
-# from inventory_item import Inventory_Item
+from inventory import Inventory
+from inventory_item import InventoryItem
 
-def main():
 
-	inventory.show_inventory()
-	print('='*10)
+item1 = InventoryItem('Brownies', 12)
+item2 = InventoryItem('Scones', 24)
 
-	inventory.add_new_item('Chocolate Brownie', 12)
-	inventory.add_new_item('Carrot Cake', 5)
-	inventory.add_new_item('Blueberry Scone', 9)
+list_of_inventory_items = []
 
-	try:
-		inventory.add_new_item('Carrot Cake', 5)
-	except:
-		print('Carrot Cake already in the inventory.')
-
-	inventory.show_inventory()
-	print('='*10)
-
-	number_to_buy = 3
-	item = 'Blueberry Scone'
-	print(f'Buying {number_to_buy} {item}.')
-	print('='*10)
-	inventory.update_number_available(item, number_to_buy)
-	
-	inventory.show_inventory()
-	print('='*10)
-
-if __name__ == '__main__':
-	main()
+# while there are new items for the inventory
+# 	create a new InventoryItem
+#	put it in a list
