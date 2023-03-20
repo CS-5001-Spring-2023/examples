@@ -44,7 +44,6 @@ def check(paren_string):
 	return True
 
 
-
 # paren_string = '(()())'
 # result = check(paren_string)
 # print(result, paren_string)

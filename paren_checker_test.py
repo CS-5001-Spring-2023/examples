@@ -60,13 +60,17 @@ class ParenCheckerTest(unittest.TestCase):
 	def test_check_complex(self):
 		self.assertTrue(paren_checker.check('(({})[]([]))'))
 
+	def test_check_complex_curly_outer(self):
+		self.assertTrue(paren_checker.check('{[]{()}}'))
+
 	def test_check_multitype_false(self):
 		self.assertFalse(paren_checker.check('({][])'))
 
 	def test_check_complex_false(self):
 		self.assertFalse(paren_checker.check('(({})[][[]))'))
-
-
+	
+	def test_check_complex_square_outer_false(self):
+		self.assertFalse(paren_checker.check('[{}{})(]'))
 
 def main():
 	unittest.main()
