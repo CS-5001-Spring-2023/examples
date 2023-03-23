@@ -10,13 +10,20 @@ def is_close(char):
 	return char in close_chars
 
 def match(open_char, close_char):
-	if open_char == '(' and close_char == ')':
-		return True
-	if open_char == '{' and close_char == '}':
-		return True
-	if open_char == '[' and close_char == ']':
+	if open_char not in open_chars or close_char not in close_chars:
+		return False
+		
+	if open_chars.index(open_char) == close_chars.index(close_char):
 		return True
 	return False
+
+	# if open_char == '(' and close_char == ')':
+	# 	return True
+	# if open_char == '{' and close_char == '}':
+	# 	return True
+	# if open_char == '[' and close_char == ']':
+	# 	return True
+	# return False
 
 def check(paren_string):
 	parens = Stack(10)
@@ -28,17 +35,8 @@ def check(paren_string):
 			if parens.size() == 0:
 				return False
 			open_char = parens.pop()
-			# print(f'popped char: {open_char}')
 			if not match(open_char, close_char):
-				return False			
-		# print('current stack:')
-		# parens.debug()
-		# print(f'close_char: {close_char}')
-		# print()
-
-	
-	# print('finished!')
-	# parens.debug()
+				return False				
 	if parens.size() > 0:
 		return False
 	return True

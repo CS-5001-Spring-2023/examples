@@ -1,17 +1,4 @@
-inventory = {
-	'Chocolate Brownie': {
-		'quantity': 12,
-		'inventory_number': 'a123f'
-	},
-	'Carrot Cake': {
-		'quantity': 5,
-		'inventory_number': 'b456g'
-	},
-	'Blueberry Scone': {
-		'quantity': 9,
-		'inventory_number': 'c789h'
-	}
-}
-
-for key, value in inventory.items():
-	print(value)
+value = ([2], [3], [4], [5])
+value1 = value[1:]
+value[1].append(3)
+print(value1)
