@@ -3,7 +3,7 @@ from student import Student
 student1 = Student('Joe', 'Rollins')
 student2 = Student('Suzy', 'Smith')
 student3 = Student('Pari', 'Goetz')
-student4 = Student('Hiromi', 'Hiraoka')
+student4 = Student('Hiro', 'Hiraoka')
 student5 = Student('Nate', 'Derbinsky')
 student6 = Student('Alan', 'Mislove')
 
@@ -20,7 +20,6 @@ list2 = list1[2:5]
 list1[4]
 list2[2]
 student5
-
 
 student3.change_first_name('Parisima')
 
